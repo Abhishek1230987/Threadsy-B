@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
   res.send("API working...");
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.listen(process.env.PORT || 4000, () => {
-    console.log("Server Started");
+  console.log("Server Started");
 });
